@@ -74,13 +74,19 @@
         slideNumber: true,
         hash: true,
         mouseWheel: true,
-		multiplex: {
-		// Example values. To generate your own, see the socket.io server instructions.
-		secret: '15603511780336184700', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-		id: '533792e97c415e73', // Obtained from socket.io server
-		url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-	},
+        multiplex: {
+          // Example values. To generate your own, see the socket.io server instructions.
+          secret: "15603511780336184700", // Obtained from the socket.io server. Gives this (the master) control of the presentation
+          id: "533792e97c415e73", // Obtained from socket.io server
+          url: "https://reveal-js-multiplex-ccjbegmaii.now.sh" // Location of socket.io server
+        },
         dependencies: [
+          {
+            src:
+              "//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js",
+            async: true
+          },
+          { src: "plugin/multiplex/master.js", async: true },
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/notes/notes.js", async: true },
