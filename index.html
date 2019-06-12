@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>Ontwikkeling van een chatbot architectuur</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
@@ -30,22 +30,56 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
+        <section data-markdown>
+          <textarea data-template>
+				## Slide 1				
+				A paragraph with some text and a [link](http://hakim.se).
+				Note:test
+			</textarea
+          >
+        </section>
         <section>Slide 2</section>
         <section>
-          <section>Vertical Slide 1</section>
-          <section>Vertical Slide 2</section>
+          <section>
+            Demo
+          </section>
+          <section>
+            Chatbot
+
+            <iframe
+              id="botkit_client"
+              src="//localhost:3000/chat.html"
+            ></iframe>
+          </section>
+          <section data-background-iframe="http://localhost:5001">
+            NLU leerplatform
+          </section>
         </section>
       </div>
     </div>
 
     <script src="js/reveal.js"></script>
+    <script src="//localhost:3000/embed.js"></script>
 
+    <script>
+      var options = {};
+      Botkit.boot(options);
+    </script>
     <script>
       // More info about config & dependencies:
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+        controls: true,
+        slideNumber: true,
+        hash: true,
+        mouseWheel: true,
+		multiplex: {
+		// Example values. To generate your own, see the socket.io server instructions.
+		secret: '15603511780336184700', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+		id: '533792e97c415e73', // Obtained from socket.io server
+		url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+	},
         dependencies: [
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
