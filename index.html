@@ -11,8 +11,21 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/blood.css" />
-
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme"/>
+    <style>
+        .container{
+            display: flex;
+            align-items:center;
+        }
+        .col{
+            flex: 1;        
+        }
+        img{
+          border:none !important;
+          background:none !important; 
+          width:30%;
+        }
+        </style>
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css" />
 
@@ -33,33 +46,48 @@
         <section>
           <H2>Ontwikkeling van een chatbot architectuur</H1>
           <h4>van idee tot deployment</h2>
-          <img  style="border:none; background:none; width:30%;" src="images/qr.png"/>
+          <img src="images/qr.png"/>
         </section>
-        <section data-markdown>
-            <textarea data-template>
-              #### Table of contents
-
-              1. Why
-
-                1. Soft Naert
-                2. General
-
-              2. How
-
-                1. Theory
-                2. Overview
-                3. Client
-                4. NLU
-                5. Learning platform
-                6. Bot server 
-                7. Shop data
-                
-              3. What
-              
-            </textarea>
+        <section> 
+          <div  class="container">    
+            <div class="col">
+            <h4>Table of contents</h4>
+            <ol>
+            <li>
+            <p>Why</p>
+            <ol>
+            <li>Soft Naert</li>
+            <li>General</li>
+            </ol>
+            </li>
+            <li>
+            <p>How</p>
+            <ol>
+            <li>Theory</li>
+            <li>Overview</li>
+            <li>Client</li>
+            <li>NLU</li>
+            <li>Learning platform</li>
+            <li>Bot server</li>
+            <li>Shop data</li>
+            </ol>
+            </li>
+            <li>
+            <p>What</p>
+            </li>
+            </ol>
+          </div>
+          <img class="col"  src="images/structure.svg"/>       
+        </div>
           </section>
           <section>
-            <h4>Waarom</h4>
+            <section>
+              <div class="container">
+                  <img class="col" src="images/why.svg"/>    
+              <h1 class="col">Waarom</h1>
+            </div>
+            </section>
+            
           </section>
         <section>
           <section>
@@ -110,6 +138,9 @@
           id: "533792e97c415e73", // Obtained from socket.io server
           url: "https://reveal-js-multiplex-ccjbegmaii.now.sh" // Location of socket.io server
         },
+        menu:{
+          themes:true,
+        },
         dependencies: [
           {
             src:
@@ -117,7 +148,6 @@
             async: true
           },          
           { src: "plugin/multiplex/master.js", async: true },
-          { src: "plugin/notes-server/client.js", async: true },
           { src: "plugin/zoom-js/zoom.js" },
           { src: 'plugin/reveal.js-menu/menu.js' },
           { src: "plugin/markdown/marked.js" },
