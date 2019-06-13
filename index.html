@@ -13,6 +13,20 @@
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/blood.css" />
 
+    <style>
+        .container{
+            display: flex;
+            align-items:center;
+        }
+        .col{
+            flex: 1;        
+        }
+        img{
+          border:none !important;
+          background:none !important; 
+          width:30%;
+        }
+        </style>
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css" />
 
@@ -31,21 +45,57 @@
     <div class="reveal">
       <div class="slides">
         <section>
-            <H2>Ontwikkeling van een chatbot architectuur</H1>
-              <h4>van idee tot deployment</h2>
+          <H2>Ontwikkeling van een chatbot architectuur</H1>
+          <h4>van idee tot deployment</h2>
+          <img src="images/qr.png"/>
         </section>
-        <section>Slide 2</section>
+        <section> 
+          <div  class="container">    
+            <div class="col">
+            <h4>Table of contents</h4>
+            <ol>
+            <li>
+            <p>Why</p>
+            <ol>
+            <li>Soft Naert</li>
+            <li>General</li>
+            </ol>
+            </li>
+            <li>
+            <p>How</p>
+            <ol>
+            <li>Theory</li>
+            <li>Overview</li>
+            <li>Client</li>
+            <li>NLU</li>
+            <li>Learning platform</li>
+            <li>Bot server</li>
+            <li>Shop data</li>
+            </ol>
+            </li>
+            <li>
+            <p>What</p>
+            </li>
+            </ol>
+          </div>
+          <img class="col"  src="images/structure.svg"/>       
+        </div>
+          </section>
+          <section>
+            <section>
+              <div class="container">
+                  <img class="col" src="images/why.svg"/>    
+              <h1 class="col">Waarom</h1>
+            </div>
+            </section>
+            
+          </section>
         <section>
           <section>
             Demo
           </section>
-          <section>
-            Chatbot
+          <section data-background-iframe="http://localhost:3000/chat.html" data-background-id="botkit_client">          
 
-            <iframe
-              id="botkit_client"
-              src="//localhost:3000/chat.html"
-            ></iframe>
           </section>
           <section data-background-iframe="http://localhost:5001">
             NLU leerplatform
@@ -54,6 +104,7 @@
         <section>Slide 3</section>
       </div>
     </div>
+
 
     <script src="js/reveal.js"></script>
     <script src="//localhost:3000/embed.js"></script>
