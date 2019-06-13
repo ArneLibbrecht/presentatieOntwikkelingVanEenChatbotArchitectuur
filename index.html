@@ -11,21 +11,22 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/blood.css" id="theme"/>
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme" />
     <style>
-        .container{
-            display: flex;
-            align-items:center;
-        }
-        .col{
-            flex: 1;        
-        }
-        img{
-          border:none !important;
-          background:none !important; 
-          width:30%;
-        }
-        </style>
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      .col {
+        flex: 1;
+      }
+      img {
+        border: none !important;
+        background: none !important;
+        box-shadow: none !important;
+        width: 30%;
+      }
+    </style>
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css" />
 
@@ -44,77 +45,93 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <H2>Ontwikkeling van een chatbot architectuur</H1>
-          <h4>van idee tot deployment</h2>
-          <img src="images/qr.png"/>
+          <H2>Ontwikkeling van een chatbot architectuur</H2>
+          <h4>van idee tot deployment</h4>
+          <img src="images/qr.png" />
         </section>
-        <section> 
-          <div  class="container">    
+        <section>
+          <div class="container">
             <div class="col">
-            <h4>Table of contents</h4>
-            <ol>
-            <li>
-            <p>Why</p>
-            <ol>
-            <li>Soft Naert</li>
-            <li>General</li>
-            </ol>
-            </li>
-            <li>
-            <p>How</p>
-            <ol>
-            <li>Theory</li>
-            <li>Overview</li>
-            <li>Client</li>
-            <li>NLU</li>
-            <li>Learning platform</li>
-            <li>Bot server</li>
-            <li>Shop data</li>
-            </ol>
-            </li>
-            <li>
-            <p>What</p>
-            </li>
-            </ol>
-          </div>
-          <img class="col"  src="images/structure.svg"/>       
-        </div>
-          </section>
-          <section>
-            <section>
-              <div class="container">
-                  <img class="col" src="images/why.svg"/>    
-              <h1 class="col">Waarom</h1>
+              <h4>Table of contents</h4>
+              <ol>
+                <li>
+                  <p>Why</p>
+                  <ol>
+                    <li>Soft Naert</li>
+                    <li>General</li>
+                  </ol>
+                </li>
+                <li>
+                  <p>How</p>
+                  <ol>
+                    <li>Theory</li>
+                    <li>Overview</li>
+                    <li>Client</li>
+                    <li>NLU</li>
+                    <li>Learning platform</li>
+                    <li>Bot server</li>
+                    <li>Shop data</li>
+                  </ol>
+                </li>
+                <li>
+                  <p>What</p>
+                </li>
+              </ol>
             </div>
-            </section>
-            
-          </section>
+            <img class="col" src="images/structure.svg" />
+          </div>
+        </section>
         <section>
           <section>
-            Demo
+            <div class="container">
+              <img class="col" src="images/why.svg" />
+              <h1 class="col">Waarom</h1>
+            </div>
           </section>
-          <section data-background-iframe="http://localhost:3000/chat.html" data-background-id="botkit_client">          
-
+        </section>
+        <section>
+          <section>
+            <div class="container">
+              <h1 class="col">Hoe</h1>
+              <img class="col" src="images/ai2.svg" />
+            </div>
           </section>
+        </section>
+        <section>
+          <section>
+            <div class="container">
+              <img class="col" src="images/chatting.svg" />
+              <h1 class="col">Wat</h1>
+            </div>
+          </section>
+          <section
+            data-background-iframe="http://localhost:3000/chat.html"
+            data-background-id="botkit_client"
+          ></section>
           <section data-background-iframe="http://localhost:5001">
             NLU leerplatform
           </section>
         </section>
-        <section>Slide 3</section>
+        <section>
+          <section>
+            <div class="container" style="flex-direction: column-reverse">
+              <h2 class="col">Zijn er nog vragen?</h2>
+              <img class="col" src="images/question.svg" />
+            </div>
+          </section>
+        </section>
       </div>
     </div>
 
     <script src="js/reveal.js"></script>
-    
+
     <script src="//localhost:3000/embed.js"></script>
-    
+
     <script>
-      Reveal.addEventListener( 'ready', function( event ) {
-  var options = {};
-      Botkit.boot(options);
-} );
-
-
+      Reveal.addEventListener("ready", function(event) {
+        var options = {};
+        Botkit.boot(options);
+      });
     </script>
     <script>
       // More info about config & dependencies:
@@ -126,11 +143,11 @@
         hash: true,
         mouseWheel: true,
 
-        	// The "normal" size of the presentation, aspect ratio will be preserved
-	// when the presentation is scaled to fit different resolutions. Can be
-	// specified using percentage units.
-	width: 1920,
-	height: 1080,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+        height: 1080,
 
         multiplex: {
           // Example values. To generate your own, see the socket.io server instructions.
@@ -138,18 +155,18 @@
           id: "533792e97c415e73", // Obtained from socket.io server
           url: "https://reveal-js-multiplex-ccjbegmaii.now.sh" // Location of socket.io server
         },
-        menu:{
-          themes:true,
+        menu: {
+          themes: true
         },
         dependencies: [
           {
             src:
               "//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js",
             async: true
-          },          
+          },
           { src: "plugin/multiplex/master.js", async: true },
           { src: "plugin/zoom-js/zoom.js" },
-          { src: 'plugin/reveal.js-menu/menu.js' },
+          { src: "plugin/reveal.js-menu/menu.js" },
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/notes/notes.js", async: true },
