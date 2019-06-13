@@ -34,22 +34,39 @@
           <H2>Ontwikkeling van een chatbot architectuur</H1>
           <h4>van idee tot deployment</h2>
           <img  style="border:none; background:none; width:30%;" src="images/qr.png"/>
-          <aside class="notes">
-            test
-          </aside>
         </section>
-        <section>Slide 2</section>
+        <section data-markdown>
+            <textarea data-template>
+              #### Table of contents
+
+              1. Why
+
+                1. Soft Naert
+                2. General
+
+              2. How
+
+                1. Theory
+                2. Overview
+                3. Client
+                4. NLU
+                5. Learning platform
+                6. Bot server 
+                7. Shop data
+                
+              3. What
+              
+            </textarea>
+          </section>
+          <section>
+            <h4>Waarom</h4>
+          </section>
         <section>
           <section>
             Demo
           </section>
-          <section>
-            Chatbot
+          <section data-background-iframe="http://localhost:3000/chat.html" data-background-id="botkit_client">          
 
-            <iframe
-              id="botkit_client"
-              src="//localhost:3000/chat.html"
-            ></iframe>
           </section>
           <section data-background-iframe="http://localhost:5001">
             NLU leerplatform
@@ -60,11 +77,16 @@
     </div>
 
     <script src="js/reveal.js"></script>
+    
     <script src="//localhost:3000/embed.js"></script>
-
+    
     <script>
-      var options = {};
+      Reveal.addEventListener( 'ready', function( event ) {
+  var options = {};
       Botkit.boot(options);
+} );
+
+
     </script>
     <script>
       // More info about config & dependencies:
@@ -93,10 +115,11 @@
             src:
               "//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js",
             async: true
-          },
+          },          
           { src: "plugin/multiplex/master.js", async: true },
           { src: "plugin/notes-server/client.js", async: true },
-
+          { src: "plugin/zoom-js/zoom.js" },
+          { src: 'plugin/reveal.js-menu/menu.js' },
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/notes/notes.js", async: true },

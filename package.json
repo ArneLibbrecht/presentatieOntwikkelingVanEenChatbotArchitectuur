@@ -42,6 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "node-static": "^0.7.11"
+    "node-static": "^0.7.11",
+    "reveal.js-menu": "^1.2.0"
   }
 }

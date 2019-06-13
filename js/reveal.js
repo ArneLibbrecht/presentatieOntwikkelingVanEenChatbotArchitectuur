@@ -1179,6 +1179,7 @@
 			backgroundImage: slide.getAttribute( 'data-background-image' ),
 			backgroundVideo: slide.getAttribute( 'data-background-video' ),
 			backgroundIframe: slide.getAttribute( 'data-background-iframe' ),
+			backgroundId: slide.getAttribute( 'data-background-id' ),
 			backgroundColor: slide.getAttribute( 'data-background-color' ),
 			backgroundRepeat: slide.getAttribute( 'data-background-repeat' ),
 			backgroundPosition: slide.getAttribute( 'data-background-position' ),
@@ -3787,7 +3788,8 @@
 					backgroundVideo = slide.getAttribute( 'data-background-video' ),
 					backgroundVideoLoop = slide.hasAttribute( 'data-background-video-loop' ),
 					backgroundVideoMuted = slide.hasAttribute( 'data-background-video-muted' ),
-					backgroundIframe = slide.getAttribute( 'data-background-iframe' );
+					backgroundIframe = slide.getAttribute( 'data-background-iframe' ),
+					backgroundId=slide.getAttribute( 'data-background-id' );
 
 				// Images
 				if( backgroundImage ) {
@@ -3835,6 +3837,10 @@
 					}
 					else {
 						iframe.setAttribute( 'src', backgroundIframe );
+					}
+
+					if(backgroundId){
+						iframe.setAttribute('id',backgroundId);
 					}
 
 					iframe.style.width  = '100%';
