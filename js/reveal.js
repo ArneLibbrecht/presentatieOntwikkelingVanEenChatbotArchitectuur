@@ -1177,6 +1177,7 @@
 			background: slide.getAttribute( 'data-background' ),
 			backgroundSize: slide.getAttribute( 'data-background-size' ),
 			backgroundImage: slide.getAttribute( 'data-background-image' ),
+			
 			backgroundVideo: slide.getAttribute( 'data-background-video' ),
 			backgroundIframe: slide.getAttribute( 'data-background-iframe' ),
 			backgroundId: slide.getAttribute( 'data-background-id' ),
