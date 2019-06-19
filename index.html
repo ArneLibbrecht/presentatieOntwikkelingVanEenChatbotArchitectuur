@@ -49,273 +49,827 @@
           <H2>Ontwikkeling van een chatbot architectuur</H1>
           <h4>van idee tot deployment</h2>
         </section>
-        <section> 
-          <div  class="container">    
-            <div class="col">
-            <h4>Table of contents</h4>
-            <ol>
-            <li>
-            <p>Why</p>
-            <ol>
-            <li>Soft Naert</li>
-            <li>General</li>
-            </ol>
-            </li>
-            <li>
-            <p>How</p>
-            <ol>
-            <li>Theory</li>
-            <li>Overview</li>
-            <li>Client</li>
-            <li>NLU</li>
-            <li>Learning platform</li>
-            <li>Bot server</li>
-            <li>Shop data</li>
-            </ol>
-            </li>
-            <li>
-            <p>What</p>
-            </li>
-            </ol>
-          </div>
-          <img class="col"  src="images/structure.svg"/>       
-        </div>
+        <section>
+            <div class="container">
+              <div class="col">
+                <h4>Table of contents</h4>
+                <ol>
+                  <li>
+                    <p>Why</p>
+                    <ol>
+                      <li>General</li>
+                      <li>Soft Naert</li>
+                      <li>Project</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <p>How</p>
+                    <ol>
+                      <li>Theory</li>
+                      <li>Overview architecture</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <p>What</p>
+                  </li>
+                </ol>
+              </div>
+              <img class="col" src="images/structure.svg" />
+            </div>
           </section>
           <section>
-              <section>
-                <div class="container">
-                  <img class="col" src="images/why.svg" />
-                  <h1 class="col">Why</h1>
-                </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <ul>
-                      <li class="fragment">39 years</li>
-                      <li class="fragment">Total IT solutions</li>
-                      <li class="fragment">
-                        Following the growth of their customers
-                      </li>
-                      <li class="fragment">In-house solutions</li>
-                    </ul>
-                    <aside class="notes">
-                      Soft Naert is a company that offers total IT solutions for
-                      companies. On the one hand we provide standard ERP software
-                      such as eMeubel, eService and eGrow. While on the other hand
-                      we also offer customized ERP software for companies who have
-                      unique processes. A long lasting relationship with our
-                      customers is essential. We have customers that have been
-                      working with us for for more than 30 years. We are capable of
-                      following the growth and changes of our customers.
-                      <br />
-                      <br />
-                      The complete ERP software solution for the furniture retail
-                      business. Since 1980 Soft Naert is familiar with the problems
-                      of furniture companies. The unique combination of our
-                      experience and the profound knowledge of our customers makes
-                      eMeubel a complete, specific & intuitive software for the
-                      furniture industry.
-                    </aside>
-                  </div>
-                  <img class="col" style="width:100%;" src="images/SNLogo.png" />
-                </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column;">
-                    <h4 class="col">Algemeen</h4>
-                    <img
-                      class="col"
-                      style="width:100%;"
-                      src="images/statistieken3.svg"
-                    />
-                  </div>
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <blockquote class="fragment">
-                      By 2020, customers will manage 85% of their relationship with
-                      the enterprise without interacting with a human. <br />
-                      --Gartner Predicts--
-                    </blockquote>
-                    <blockquote class="fragment">
-                      By 2020, 30 percent of all B2B companies will employ
-                      artificial intelligence (AI) to augment at least one of their
-                      primary sales processes. <br />
-                      --Gartner Predicts--
-                    </blockquote>
-                    <aside class="notes">
-                      AI in sales allows for more efficiency and effectiveness in
-                      business processes, often with up to 30 percent higher
-                      conversion rates when engaging prospects or leads, according
-                      to Gartner. It is becoming an attractive alternative for sales
-                      organizations with high volumes of lead processing,
-                      opportunities and forecasting processes because it provides
-                      fast and accurate support when performing the different sales
-                      stages.
-                    </aside>
-                  </div>
-                </div>
-              </section>
+            <section>
+              <div class="container">
+                <img class="col" src="images/why.svg" />
+                <h1 class="col">Why</h1>
+              </div>
             </section>
             <section>
-              <section>
-                <div class="container">
-                  <h1 class="col">Hoe</h1>
-                  <img class="col" src="images/ai2.svg" />
+              <div class="container">
+                <div class="col container" style="flex-direction: column;">
+                  <h4 class="col">Future</h4>
+                  <img
+                    class="col"
+                    style="width:100%;"
+                    src="images/statistieken3.svg"
+                  />
                 </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <ul>
-                      <li class="fragment">Machine learning</li>
-                      <li class="fragment">Deep learning</li>
-                      <li class="fragment">
-                        Supervised learning
-                      </li>
-                      <li class="fragment">
-                        <div>
-                          <p>Natural Language Understanding</p>
-                          <ul>
-                            <li>Intents</li>
-                            <li>Entities</li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col container" style="flex-direction: column;">
-                    <h4>Theorie</h4>
-                    <img class="col" style="width:100%;" src="images/theory.svg" />
-                  </div>
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <blockquote class="fragment">
+                    By 2020, customers will manage 85% of their relationship with
+                    the enterprise without interacting with a human. <br />
+                    --Gartner Predicts--
+                  </blockquote>
+                  <blockquote class="fragment">
+                    By 2020, 30 percent of all B2B companies will employ
+                    artificial intelligence (AI) to augment at least one of their
+                    primary sales processes. <br />
+                    --Gartner Predicts--
+                  </blockquote>
+                  <aside class="notes">
+                    AI in sales allows for more efficiency and effectiveness in
+                    business processes, often with up to 30 percent higher
+                    conversion rates when engaging prospects or leads, according
+                    to Gartner. It is becoming an attractive alternative for sales
+                    organizations with high volumes of lead processing,
+                    opportunities and forecasting processes because it provides
+                    fast and accurate support when performing the different sales
+                    stages.
+                  </aside>
                 </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column;">
-                    <h4>Machine Learning</h4>
-                    <img class="col" style="width:100%;" src="images/ai.svg" />
-                  </div>
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <ul>
-                      <li class="fragment">Labeler</li>
-                      <li class="fragment">
-                        <img style="width:60%" src="images/houses.svg" />
-                      </li>
-                      <li class="fragment">
-                        Voorbeelden > Instructies
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <ul>
-                      <li class="fragment">Vorm van machine learning</li>
-                      <li class="fragment">
-                        <div>
-                          <p>Meerdere lagen</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col container" style="flex-direction: column;">
-                    <h4>Deep learning</h4>
-                    <img
-                      class="col"
-                      style="width:100%;"
-                      src="images/deepLearning.png"
-                    />
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="container">
-                  <div class="col container" style="flex-direction: column;">
-                    <h4>Supervised Learning</h4>
-                    <img class="col" style="width:100%;" src="images/ai.svg" />
-                  </div>
-                  <div class="col container" style="flex-direction: column; flex:2">
-                    <ul>
-                      <li class="fragment">supervised</li>
-                      <li class="fragment">
-                        unsupervised
-                      </li>
-                      <li class="fragment">
-                        reinforcement
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <h4>NLU</h4>
-                <ul>
-                  <li class="fragment">Intent</li>
-                  <li class="fragment">Entity</li>
-                </ul>
-              </section>
-              <section
-                data-background-image="images/architectuur.svg"
-                data-background-size="contain"
-              ></section>
-              <section
-                data-background-image="images/overzicht.png"
-                data-background-size="contain"
-              ></section>
-              <section
-                data-background-image="images/orderinfo.png"
-                data-background-size="contain"
-              ></section>
-              <section>
-                <h4>Standaard</h4>
-                <pre><code class="hljs" style="height:100vh;">
-                  let standardExpressions = { 
-                    NL: { 
-                      answers: {              
-                        Get_Openinghours: { 
-                          failed: "Oeps er ging iets verkeerd. Ik kan momenteel de openingsuren niet geven, probeer het later opnieuw.",
-                          unknown: "De openingsuren kan u terugvinden op onze website.", 
-                        },
-                        Get_Orders: {
-                          noOrders: "U heeft enkel dit openstaand order bij ons.",
-                          whichOrder: "Over welk order wil u meer weten?",
-                          orderFailed: "Er liep iets mis terwijl we uw orders zochten.",
-                        },
-                </code></pre>
-                <h4>Op maat van klant</h4>
-                <pre><code class="hljs" style="height:100vh;">
-                    let expressionsConfig = {
-                      'SN-Test-98510': {
-                          NL: {
-                              answers: {                             
-                                  Get_Openinghours: {
-                                      handle: true,
-                                      messages: {
-                                          failed: "Het lukt ons niet altijd om openingsuren te geven. sorry",
-                                          unknown: "ik weet eigenlijk zelf niet wanneer we open zijn, bel anders eens naar de winkel?",
-                                      }
-                                  },
-                                  Get_Orders: {
-                                      handle: true,
-                                      messages: {
-                                          noOrders: "U heeft enkel dit openstaand order bij ons.",
-                                          whichOrder: "Welk order wilt u inzien?",
-                                          orderInfo: "U heeft enkel nog het order •--order--•",
-                                      }
-                                  },
-                  </code></pre>
-              </section>
+              </div>
             </section>
             <section>
-              <section>
-                <div class="container">
-                  <img class="col" src="images/chatting.svg" />
-                  <h1 class="col">Wat</h1>
+              <div class="container">
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <ul>
+                    <li class="fragment">39 years</li>
+                    <li class="fragment">Total IT solutions</li>
+                    <li class="fragment">
+                      Following the growth of their customers
+                    </li>
+                    <li class="fragment">In-house solutions</li>
+                  </ul>
+                  <aside class="notes">
+                    Soft Naert is a company that offers total IT solutions for
+                    companies. On the one hand we provide standard ERP software
+                    such as eMeubel, eService and eGrow. While on the other hand
+                    we also offer customized ERP software for companies who have
+                    unique processes. A long lasting relationship with our
+                    customers is essential. We have customers that have been
+                    working with us for for more than 30 years. We are capable of
+                    following the growth and changes of our customers.
+                    <br />
+                    <br />
+                    The complete ERP software solution for the furniture retail
+                    business. Since 1980 Soft Naert is familiar with the problems
+                    of furniture companies. The unique combination of our
+                    experience and the profound knowledge of our customers makes
+                    eMeubel a complete, specific & intuitive software for the
+                    furniture industry.
+                  </aside>
                 </div>
-              </section>
+                <img class="col" style="width:100%;" src="images/SNLogo.png" />
+              </div>
+            </section>
+            <section>
+              <div class="container">
+                <div class="col container" style="flex-direction: column;">
+                  <h4 class="col">Project</h4>
+                  <img class="col" style="width:100%;" src="images/reason.svg" />
+                </div>
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <ul>
+                    <li class="fragment">eMeubel</li>
+                    <li class="fragment">Furniture retailers</li>
+                    <li class="fragment">Customer questions</li>
+                    <li class="fragment">Prototype</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section>
+            <section>
+              <div class="container">
+                <h1 class="col">Hoe</h1>
+                <img class="col" src="images/ai2.svg" />
+              </div>
+            </section>
+            <section>
+              <div class="container">
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <ul>
+                    <li class="fragment">Machine learning</li>
+                    <li class="fragment">Deep learning</li>
+                    <li class="fragment">
+                      Learning strategies
+                    </li>
+                    <li class="fragment">
+                      <div>
+                        <p>Natural Language Understanding</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col container" style="flex-direction: column;">
+                  <h4>Theorie</h4>
+                  <img class="col" style="width:100%;" src="images/theory.svg" />
+                </div>
+              </div>
+            </section>
+            <section
+              data-background-image="images/ML.gif"
+              data-background-size="contain"
+            ></section>
+           
+            <section>
+              <div class="container">
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <ul>
+                    <li class="fragment">Vorm van machine learning</li>
+                    <li class="fragment">
+                      <div>
+                        <p>Meerdere lagen</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col container" style="flex-direction: column;">
+                  <h4>Deep learning</h4>
+                  <img
+                    class="col"
+                    style="width:100%;"
+                    src="images/ai.svg"
+                  />
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="container">
+                <div class="col container" style="flex-direction: column;">
+                  <h4>Learning strategies</h4>
+                  <img class="col" style="width:100%;" src="images/learning.svg" />
+                </div>
+                <div class="col container" style="flex-direction: column; flex:2">
+                  <ul>
+                    <li class="fragment">supervised</li>
+                    <li class="fragment">
+                      reinforcement
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h4>Natural Language Understanding</h4>
+              <ul>
+                <li class="fragment">
+                  Vraag: Wanneer wordt m'n slaapkamer geleverd.
+                </li>
+                <li class="fragment">Intent: wanneer leveren?</li>
+                <li class="fragment">Entity: slaapkamer</li>
+              </ul>
+            </section>
+            <section
+              class="animate"
+              data-background-size="contain"
+              data-animate-svg="images/architectuur.svg"
+            >
+              <svg>
+                <circle
+                  opacity="0"
+                  cx="0"
+                  cy="0"
+                  r="10"
+                  style="stroke-width:2;stroke:#000000"
+                  fill="#ff0000"
+                >
+                  <animateTransform
+                    id="init"
+                    class="fragment"
+                    data-reverse="reverse0"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="0 0"
+                    to="718 480"
+                    fill="freeze"
+                  />
+                  <animate
+                    begin="init.end"
+                    attributeName="opacity"
+                    from="0"
+                    to="1"
+                    dur="0.1s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+                  <animate
+                    id="reverse0"
+                    begin="indefinite"
+                    attributeName="opacity"
+                    to="0"
+                    from="1"
+                    dur="0.1s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+  
+                  <animateTransform
+                    id="step1a"
+                    class="fragment"
+                    data-reverse="reverse1"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="718 480"
+                    to="695 475"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step1b"
+                    attributeName="transform"
+                    begin="step1a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="695 475"
+                    to="193 475"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step1c"
+                    attributeName="transform"
+                    begin="step1b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="193 475"
+                    to="193 245"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step1d"
+                    attributeName="transform"
+                    begin="step1c.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="193 245"
+                    to="175 205"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="reverse1"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="175 205"
+                    to="718 480"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step2a"
+                    class="fragment"
+                    data-reverse="reverse2"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="175 205"
+                    to="215 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step2b"
+                    attributeName="transform"
+                    begin="step2a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="215 188"
+                    to="365 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step2c"
+                    attributeName="transform"
+                    begin="step2b.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="365 188"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse2"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="410 200"
+                    to="175 205"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step3a"
+                    class="fragment"
+                    data-reverse="reverse3"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="410 200"
+                    to="448 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step3b"
+                    attributeName="transform"
+                    begin="step3a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="448 188"
+                    to="615 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step3c"
+                    attributeName="transform"
+                    begin="step3b.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="615 188"
+                    to="658 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse3"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="658 200"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step4a"
+                    class="fragment"
+                    data-reverse="reverse4"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="658 200"
+                    to="615 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step4b"
+                    attributeName="transform"
+                    begin="step4a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="615 217"
+                    to="448 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step4c"
+                    attributeName="transform"
+                    begin="step4b.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="448 217"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse4"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="410 200"
+                    to="658 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step5a"
+                    class="fragment"
+                    data-reverse="reverse5"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="410 200"
+                    to="410 160"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step5b"
+                    attributeName="transform"
+                    begin="step5a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="410 160"
+                    to="410 128"
+                    fill="freeze"
+                  />
+  
+                  <animate
+                    begin="step5a.end"
+                    attributeName="r"
+                    from="10"
+                    to="5"
+                    dur="0.4s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+                  <animateTransform
+                    id="step5c"
+                    attributeName="transform"
+                    begin="step5b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="410 128"
+                    to="624 128"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step5d"
+                    attributeName="transform"
+                    begin="step5c.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="624 128"
+                    to="624 110"
+                    fill="freeze"
+                  />
+                  <animate
+                    begin="step5d.end"
+                    attributeName="r"
+                    from="5"
+                    to="10"
+                    dur="0.4s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+                  <animateTransform
+                    id="step5e"
+                    attributeName="transform"
+                    begin="step5d.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="624 110"
+                    to="624 80"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse5"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="624 80"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step6a"
+                    class="fragment"
+                    data-reverse="reverse6"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="624 80"
+                    to="624 110"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step6b"
+                    attributeName="transform"
+                    begin="step6a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="624 110"
+                    to="624 128"
+                    fill="freeze"
+                  />
+  
+                  <animate
+                    begin="step6a.end"
+                    attributeName="r"
+                    from="10"
+                    to="5"
+                    dur="0.4s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+                  <animateTransform
+                    id="step6c"
+                    attributeName="transform"
+                    begin="step6b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="624 128"
+                    to="410 128"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step6d"
+                    attributeName="transform"
+                    begin="step6c.end"
+                    dur="0.4s"
+                    type="translate"
+                    from="410 128"
+                    to="410 160"
+                    fill="freeze"
+                  />
+                  <animate
+                    begin="step6d.end"
+                    attributeName="r"
+                    from="5"
+                    to="10"
+                    dur="0.4s"
+                    fill="freeze"
+                    repeatCount="1"
+                  />
+                  <animateTransform
+                    id="step6e"
+                    attributeName="transform"
+                    begin="step6d.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="410 160"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse6"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="410 200"
+                    to="624 80"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step7a"
+                    class="fragment"
+                    data-reverse="reverse7"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="410 200"
+                    to="365 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step7b"
+                    attributeName="transform"
+                    begin="step7a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="365 217"
+                    to="215 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step7c"
+                    attributeName="transform"
+                    begin="step7b.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="215 217"
+                    to="175 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="reverse7"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="175 200"
+                    to="410 200"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step8a"
+                    class="fragment"
+                    data-reverse="reverse8"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="175 205"
+                    to="140 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step8b"
+                    attributeName="transform"
+                    begin="step8a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="140 188"
+                    to="55 188"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step8c"
+                    attributeName="transform"
+                    begin="step8b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="55 188"
+                    to="55 430"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step8d"
+                    attributeName="transform"
+                    begin="step8c.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="55 430"
+                    to="70 475"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="reverse8"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="70 475"
+                    to="175 205"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step9a"
+                    class="fragment"
+                    data-reverse="reverse9"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="70 475"
+                    to="90 430"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step9b"
+                    attributeName="transform"
+                    begin="step9a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="90 430"
+                    to="90 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step9c"
+                    attributeName="transform"
+                    begin="step9b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="90 217"
+                    to="135 217"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step9d"
+                    attributeName="transform"
+                    begin="step9c.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="135 217"
+                    to="175 205"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="reverse9"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="175 200"
+                    to="70 475"
+                    fill="freeze"
+                  />
+  
+                  <animateTransform
+                    id="step10a"
+                    class="fragment"
+                    data-reverse="reverse10"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.2s"
+                    type="translate"
+                    from="175 205"
+                    to="158 245"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step10b"
+                    attributeName="transform"
+                    begin="step10a.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="158 245"
+                    to="158 510"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step10c"
+                    attributeName="transform"
+                    begin="step10b.end"
+                    dur="0.8s"
+                    type="translate"
+                    from="158 510"
+                    to="695 510"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="step10d"
+                    attributeName="transform"
+                    begin="step10c.end"
+                    dur="0.2s"
+                    type="translate"
+                    from="695 510"
+                    to="718 480"
+                    fill="freeze"
+                  />
+                  <animateTransform
+                    id="reverse10"
+                    attributeName="transform"
+                    begin="indefinite"
+                    dur="0.01s"
+                    type="translate"
+                    from="718 480"
+                    to="175 205"
+                    fill="freeze"
+                  />
+                </circle>
+              </svg>
+            </section>
+          </section>
+          <section>
+            <section>
+              <div class="container">
+                <img class="col" src="images/chatting.svg" />
+                <div class="col container" style="flex-direction: column;">
+                  <h1 class="col">Resultaat</h1>
+                  <ul class="col">
+                    <li class="fragment">Leerplatform</li>
+                    <li class="fragment">Botserver</li>
+                    <li class="fragment">Wordpress plugin</li>
+                    <li class="fragment">Configureerbaar</li>
+                    <li class="fragment">Generiek</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
               <section>
                   <div class="container" style="flex-direction: column">
                       <img class="col" src="images/teaching.svg"/>    
