@@ -927,6 +927,65 @@
           id: "533792e97c415e73", // Obtained from socket.io server
           url: "https://reveal-js-multiplex-ccjbegmaii.now.sh" // Location of socket.io server
         },
+        anything: [
+          {
+            className: "animate",
+            initialize: function(container, options) {
+              Reveal.addEventListener("fragmentshown", function(event) {
+                if (typeof event.fragment.beginElement === "function") {
+                  event.fragment.beginElement();
+                }
+              });
+              Reveal.addEventListener("fragmenthidden", function(event) {
+                if (event.fragment.hasAttribute("data-reverse")) {
+                  var reverse = event.fragment.parentElement.querySelector(
+                    '[id="' + event.fragment.getAttribute("data-reverse") + '"]'
+                  );
+                  if (reverse && typeof reverse.beginElement === "function") {
+                    reverse.beginElement();
+                  }
+                }
+              });
+              if (container.getAttribute("data-animate-svg")) {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = function() {
+                  if (xhr.readyState === 4) {
+                    var svg = container.querySelector("svg");
+                    container.removeChild(svg);
+                    container.innerHTML =
+                      xhr.responseText + container.innerHTML;
+                    if (svg) {
+                      container.querySelector("svg").innerHTML =
+                        container.querySelector("svg").innerHTML +
+                        svg.innerHTML;
+                    }
+                  } else {
+                    console.warn(
+                      "Failed to get file. ReadyState: " +
+                        xhr.readyState +
+                        ", Status: " +
+                        xhr.status
+                    );
+                  }
+                };
+                xhr.open(
+                  "GET",
+                  container.getAttribute("data-animate-svg"),
+                  true
+                );
+                xhr.send();
+              }
+            }
+          },
+          {
+            className: "anything",
+            initialize: function(container, options) {
+              if (options && options.initialize) {
+                options.initialize(container);
+              }
+            }
+          }
+        ],
         width:1920,
         height:1080,
         dependencies: [
@@ -936,7 +995,7 @@
             async: true
           },
           { src: "plugin/multiplex/client.js", async: true },
-
+          { src: "plugin/anything/anything.js" },
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/zoom-js/zoom.js" },
